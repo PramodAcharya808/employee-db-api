@@ -16,7 +16,7 @@ emplpyeeRouter.post("/create", async (req, res) => {
 
   const employeeCreated = await Employee.findById(employeeObject._id);
   if (!employeeCreated) {
-    res.status(400).json({ message: "Employee not created" });
+    res.status(400).json({ message: "Employee not created " });
   } else {
     res.status(201).json(employeeObject);
   }
